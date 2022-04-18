@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Colectes {
     //Замер добавления
-    static void TestAdd(int n, List<Integer> list)
+    static void speedAdd(int n, List<Integer> list)
     {
         System.out.print("      Add");
         System.out.print("         "+n);
@@ -19,7 +19,7 @@ public class Colectes {
         System.out.printf("           "+ time/1_000_000.0);
     }
     //Замер получения
-    private static void TestGet(int n, List<Integer> list)
+    private static void speedGet(int n, List<Integer> list)
     {
         System.out.print("      Get");
         System.out.print("         "+n);
@@ -32,7 +32,7 @@ public class Colectes {
         System.out.printf("           "+ time/1_000_000.0);
     }
     //Замер удаления
-    private static void TestDelete(int n, List<Integer> list)
+    private static void speedDelete(int n, List<Integer> list)
     {
         System.out.print("      Delete");
         System.out.print("      "+n);
@@ -46,7 +46,7 @@ public class Colectes {
         System.out.printf("           "+ time/1_000_000.0);
     }
     //Замер сортировки
-    private static void TestSort(int n, List<Integer> list)
+    private static void speedSort(int n, List<Integer> list)
     {
         //System.out.printf("%-10s%-,20d","Sort",n);
         System.out.print("      Sort");
@@ -59,7 +59,7 @@ public class Colectes {
         System.out.print("           "+ time/1_000_000.0);
     }
     //Замер размера
-    private static void TestSize(int n, List<Integer> list)
+    private static void speedSize(int n, List<Integer> list)
     {
         //System.out.printf("%-10s%-,20d","Sort",n);
         System.out.print("      Size");
@@ -85,63 +85,62 @@ public class Colectes {
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Linkedlist);
-            TestAdd(i, Linkedlist);
+            speedAdd(i, Linkedlist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Arraylist);
-            TestAdd(i, Arraylist);
+            speedAdd(i, Arraylist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Linkedlist);
-            TestGet(i, Linkedlist);
+            speedGet(i, Linkedlist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Arraylist);
-            TestGet(i, Arraylist);
+            speedGet(i, Arraylist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<8000;i=i*2) {
             printListName(Linkedlist);
-            TestDelete(i, Linkedlist);
+            speedDelete(i, Linkedlist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<8000;i=i*2) {
             printListName(Arraylist);
-            TestDelete(i, Arraylist);
+            speedDelete(i, Arraylist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Linkedlist);
-            TestSort(i, Linkedlist);
+            speedSort(i, Linkedlist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Arraylist);
-            TestSort(i, Arraylist);
+            speedSort(i, Arraylist);
             System.out.println();
         }
-
 
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Linkedlist);
-            TestSize(i, Linkedlist);
+            speedSize(i, Linkedlist);
             System.out.println();
         }
         System.out.println();
         for(int i=1000;i<=8000;i=i*2) {
             printListName(Arraylist);
-            TestSize(i, Arraylist);
+            speedSize(i, Arraylist);
             System.out.println();
         }
     }
@@ -152,6 +151,7 @@ public class Colectes {
         LinkedList<Integer> listLinked = new LinkedList<>();
         ArrayList<Integer> arrayList = new ArrayList<>();
         System.out.print("List type     Method      Col-vo oper     Time(ms)");
+        System.out.println();
         Testing(listLinked, arrayList);
 
     }
