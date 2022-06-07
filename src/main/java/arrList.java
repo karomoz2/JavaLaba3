@@ -31,7 +31,7 @@ public class arrList {
     public  String Del(int n)
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             arLi.remove(i);
@@ -46,7 +46,7 @@ public class arrList {
     public  String Get(int n)
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             arLi.get(i);
@@ -60,7 +60,7 @@ public class arrList {
     public  String Sort()
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         Collections.sort(arLi);
         double EndTime= System.nanoTime()-StartTime;
         EndTime=EndTime/1_000_000.0;

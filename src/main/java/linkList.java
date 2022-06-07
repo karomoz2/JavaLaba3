@@ -28,7 +28,7 @@ public class linkList {
     public  String Del(int n)
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             linLi.remove(i);
@@ -43,7 +43,7 @@ public class linkList {
     public  String Get(int n)
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             linLi.get(i);
@@ -57,7 +57,7 @@ public class linkList {
     public  String Sort()
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         Collections.sort(linLi);
         double EndTime= System.nanoTime()-StartTime;
         EndTime=EndTime/1_000_000.0;

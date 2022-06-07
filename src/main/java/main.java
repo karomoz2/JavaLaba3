@@ -13,7 +13,7 @@ public class main {
 
 
         System.out.format("________________________________________%n");
-        System.out.format("|     Method    | Kolvo op |-Time (ms)-|%n");
+        System.out.format("|-----Method----|-Kolvo op-|-Time (ms)-|%n");
         System.out.format("|---------------+----------+-----------|%n");
         System.out.printf("|%-15s|%10d|%11s|%n","add ArrayList", 1000, a.Add(1000));    a.Clear();
         System.out.printf("|%-15s|%10d|%11s|%n","add LinkedList", 1000, l.Add(1000));   l.Clear();
