@@ -12,7 +12,7 @@ public class arrList {
     public  String Add(int n)
     {
         String res="";
-        long StartTime = System.nanoTime();
+        double StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             arLi.add(i);
@@ -20,9 +20,14 @@ public class arrList {
         double EndTime= System.nanoTime()-StartTime;
         EndTime=EndTime/1_000_000.0;
         res=Double.toString(EndTime);
-        arLi.clear();
+
         return res;
     }
+
+    public  void Clear()
+    {
+        arLi.clear();
+    };
 
     public  String Del(int n)
     {
@@ -35,6 +40,7 @@ public class arrList {
         double EndTime= System.nanoTime()-StartTime;
         EndTime=EndTime/1_000_000.0;
         res=Double.toString(EndTime);
+
         return res;
     }
 
