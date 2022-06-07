@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-
-
+import java.util.Collections;
 
 
 public class arrList {
@@ -8,7 +7,7 @@ public class arrList {
     ArrayList<Integer> arLi=new ArrayList<>();
 
     public arrList() {}
-
+    //Добавление
     public  String Add(int n)
     {
         String res="";
@@ -23,12 +22,12 @@ public class arrList {
 
         return res;
     }
-
+    //Очистка
     public  void Clear()
     {
         arLi.clear();
     };
-
+    //Удаление
     public  String Del(int n)
     {
         String res="";
@@ -43,7 +42,7 @@ public class arrList {
 
         return res;
     }
-
+    //Получение
     public  String Get(int n)
     {
         String res="";
@@ -57,6 +56,16 @@ public class arrList {
         res=Double.toString(EndTime);
         return res;
     }
-
+    //Сортировка
+    public  String Sort()
+    {
+        String res="";
+        long StartTime = System.nanoTime();
+        Collections.sort(arLi);
+        double EndTime= System.nanoTime()-StartTime;
+        EndTime=EndTime/1_000_000.0;
+        res=Double.toString(EndTime);
+        return res;
+    }
 
 }

@@ -1,10 +1,11 @@
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class linkList {
 
     public linkList() {}
     LinkedList<Integer> linLi=new LinkedList<>();
-
+    //Добавление
     public  String Add(int n)
     {
         String res="";
@@ -18,12 +19,12 @@ public class linkList {
         res=Double.toString(EndTime);
         return res;
     }
-
+    //Очистка
     public  void Clear()
     {
         linLi.clear();
     };
-
+    //Удаление
     public  String Del(int n)
     {
         String res="";
@@ -38,7 +39,7 @@ public class linkList {
         return res;
     }
 
-
+    //Получение
     public  String Get(int n)
     {
         String res="";
@@ -52,6 +53,16 @@ public class linkList {
         res=Double.toString(EndTime);
         return res;
     }
-
+    //Сортировка
+    public  String Sort()
+    {
+        String res="";
+        long StartTime = System.nanoTime();
+        Collections.sort(linLi);
+        double EndTime= System.nanoTime()-StartTime;
+        EndTime=EndTime/1_000_000.0;
+        res=Double.toString(EndTime);
+        return res;
+    }
 
 }
