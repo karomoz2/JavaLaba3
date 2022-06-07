@@ -36,14 +36,20 @@ public class main {
         System.out.println("");System.out.println("");System.out.println("");
        // System.out.println("Metod        Kol-vo       Time");
 */
-        String Method=("add");
-        String kolvo=("1000");
-        String Time=a.AddArr(10000);
-
-        System.out.format("|%s|%s|%s|%n", "Method", "kolvo", "Time");
-        System.out.printf("|%s|%d|%s|%n","addArr", 10000, a.AddArr(100000));
+        // String Method=("add");
+        //String kolvo=("1000");
+       // String Time=a.AddArr(10000);
 
 
+        System.out.format("________________________________________%n");
+        System.out.format("|     Method    | Kolvo op |-Time (ms)-|%n");
+        System.out.format("|---------------+----------+-----------|%n");
+        System.out.printf("|%-15s|%10d|%11s|%n","add ArrayList", 1000, a.Add(1000));
+        System.out.printf("|%-15s|%10d|%11s|%n","add LinkedList", 1000, l.Add(1000));
+        System.out.printf("|%-15s|%10d|%11s|%n","add ArrayList", 10000, a.Add(10000));
+        System.out.printf("|%-15s|%10d|%11s|%n","add LinkedList", 10000, l.Add(10000));
+        System.out.printf("|%-15s|%10d|%11s|%n","add ArrayList", 50000, a.Add(50000));
+        System.out.printf("|%-15s|%10d|%11s|%n","add LinkedList", 50000, l.Add(50000));
 
 
 

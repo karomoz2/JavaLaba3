@@ -5,41 +5,48 @@ public class linkList {
     public linkList() {}
     LinkedList<Integer> linLi=new LinkedList<>();
 
-    public  void AddLinked(int n)
+    public  String Add(int n)
     {
+        String res="";
         long StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             linLi.add(i);
         }
-        long EndTime= System.nanoTime()-StartTime;
-        //EndTime=EndTime/100000;
-        System.out.print(EndTime/1_000_000.0);
+        double EndTime= System.nanoTime()-StartTime;
+        EndTime=EndTime/1_000_000.0;
+        res=Double.toString(EndTime);
+        linLi.clear();
+        return res;
     }
 
-    public  void DelLi(int n)
+    public  String Del(int n)
     {
+        String res="";
         long StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             linLi.remove(i);
         }
-        long EndTime= System.nanoTime()-StartTime;
-        // EndTime=EndTime/1_000_000;
-        System.out.print(EndTime/1_000_000.0);
+        double EndTime= System.nanoTime()-StartTime;
+        EndTime=EndTime/1_000_000.0;
+        res=Double.toString(EndTime);
+        return res;
     }
 
 
-    public  void GetLi(int n)
+    public  String Get(int n)
     {
+        String res="";
         long StartTime = System.nanoTime();
         for(int i=0; i<n;i++)
         {
             linLi.get(i);
         }
-        long EndTime= System.nanoTime()-StartTime;
-        // EndTime=EndTime/1_000_000;
-        System.out.print(EndTime/1_000_000.0);
+        double EndTime= System.nanoTime()-StartTime;
+        EndTime=EndTime/1_000_000.0;
+        res=Double.toString(EndTime);
+        return res;
     }
 
 
