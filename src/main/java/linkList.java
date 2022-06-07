@@ -19,7 +19,7 @@ public class linkList {
         res=Double.toString(EndTime);
         return res;
     }
-    //Очистка
+    //Очистка.
     public  void Clear()
     {
         linLi.clear();
